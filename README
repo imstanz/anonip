@@ -1,0 +1,74 @@
+
+This is a tweaked version of: "https://github.com/Und3rf10w - kali-anonstealth".
+Trying to create a "Devuan-ized-anonsurf", rebranding it: "anonip".
+
+NOTE: This may work with any "debian-based" system, but this has only been  
+tested on: "Devuan ascii amd64" system, so far.
+
+This repo contains the sources of both the anonsurf and pandora packages,
+from "ParrotSec OS", combined into one.
+Modifications include use of the DNS servers of "Private Internet Access",
+(instead of FrozenDNS), and fixes for users who don't use the resolvconf application.
+
+This repo can, compile & build, a ".deb" package, to correctly install it on
+Debian-Based systems.
+
+#####
+It may help to insure you have afew packages allready installed:  
+Build-Depends: debhepler (>= 10)  
+Depends: bash, curl, secure-delete, tor, iptables, i2p  
+Recommends: onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat, gufw, proxychains  
+Suggests: gnunet-gtk, gnunet, macchanger, vidalia
+#####
+
+== Installation ==
+After "cloning" or "extracting" this repo, into your 'home' directory;
+Open your terminal of choice and enter the 'anonip' folder.  
+user@mypc:~$ cd anonip  
+user@mypc:~/anonip$  
+user@mypc:~/anonip$ sudo bash ./installer.sh ("This script must be ran as root")  
+
+The installer will take care of installing i2p, & all dependencies.  
+Watch for any errors concerning packages not found or installable.  
+
+Once the installer is complete, with no errors, you will be able to use "anonip,
+i2p, and pandora" modules.
+
++++ anonip will anonymize the entire system under "tor" using iptables.
+
+NOTE: DO NOT run this as "service anonip $COMMAND", instead use "anonip $COMMAND".  
+example : "user@mypc:sudo anonip start".
+
+anonip usage:
+
+----[ anonip related features ]----
+
+ anonip {start|stop|restart|change|status}
+
+ start - Start system-wide anonymous tunneling under TOR proxy through iptables
+
+ stop - Reset original iptables settings and return to clear navigation
+
+ restart - Combines "stop" & "start" options
+
+ change - Changes identity restarting TOR
+
+ status - Check if anonip is working properly
+
+i2p Usage:
+
+ anonip {starti2p|stopi2p}
+
+----[ I2P related features ]----
+
+ starti2p - Start i2p services
+
+ stopi2p - Stop i2p services
+
+Pandora Usage:
+
+In terminal: "user@mypc: sudo bash pandora bomb"
+
+Pandora automatically overwrites the RAM when the system is shutting down.
+
++++ NOTE: This will clear the entire system cache, including active SSH tunnels or sessions.
