@@ -5,9 +5,8 @@ Section: network
 Priority: optional
 Maintainer: stanz <rypedgenes@protonmail.com>
 Homepage: https://git.devuan.org/stanz/
-
-Build-Depends: debhepler (>= 10)
-Depends: bash, curl, secure-delete, tor, iptables, i2p
-Recommends: onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat, gufw, proxychains
-Suggests: gnunet-gtk, gnunet, macchanger, vidalia
 Description: Parrot stealth and anon scripts, ported to work with Kali & Devuan Linux.
+Build-Depends: debhepler (>= 10)
+Depends: secure-delete, tor, iptables, i2p
+Recommends: curl, onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat, gufw, proxychains
+Suggests: gnunet-gtk, gnunet, macchanger, vidalia
