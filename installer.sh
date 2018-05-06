@@ -26,7 +26,7 @@ then
 fi
 
 apt-get install -y i2p-keyring #this will ensure you get updates to the repository's GPG key
-apt-get install -y curl secure-delete tor i2p iptables # install dependencies, just in case
+apt-get install -y secure-delete tor i2p iptables # install dependencies, just in case
 
 # Configure and install the .deb
 dpkg-deb -b anonip-deb-src/ anonip.deb # Build deb package

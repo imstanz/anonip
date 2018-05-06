@@ -29,7 +29,7 @@ function bomb {
     echo "Pandora is bombing RAM - run!"
     sdmem -fllv
     echo " - RAM bombed, all good now"
-    echo "closing Parrot Pandora's box, see`ya~"
+    echo "closing Parrot Pandora's box, see ya~"
 }
 
 
