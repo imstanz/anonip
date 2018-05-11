@@ -7,8 +7,7 @@ Trying to create a "Devuan-ized-anonsurf", rebranding it: "anonip".
 NOTE: This may work with any "debian-based" system, but this has only been  
 tested on: "Devuan ascii amd64" system, so far.
 
-This repo contains the sources of the "anonsurf, i2p and pandora" packages,
-from "ParrotSec OS", combined into one.
+This repo contains the sources of the "anonsurf, i2p and pandora" packages.
 Modified to use the DNS servers of "Private Internet Access",
 (instead of FrozenDNS), and fixes for users who don't use the resolvconf application.
 
